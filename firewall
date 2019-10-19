@@ -7,7 +7,6 @@
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 80 -j LOG --log-prefix "Accept HTTP" --log-level 7
 -A INPUT -d 10.171.5.161/32 -p tcp -m tcp --dport 80 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 80 -j LOG --log-prefix "Accept SSH" --log-level 7
 -A INPUT -p tcp -m tcp --dport 80 -j LOG --log-prefix "Accept HTTP" --log-level 7
 -A INPUT -p tcp -m tcp --dport 2222 -j LOG --log-prefix "Accept SSH" --log-level 7
 -A INPUT -d 10.171.5.161/32 -p tcp -m tcp --dport 2222 -j ACCEPT
